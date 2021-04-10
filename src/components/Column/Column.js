@@ -4,6 +4,7 @@ import {settings} from '../../data/dataStore';
 import Card from '../Card/Card'
 import PropTypes from 'prop-types';
 import Creator from '../Creator/Creator';
+import Icon from '../Icon/Icon';
 
 
 class Column extends React.Component {
@@ -34,7 +35,7 @@ class Column extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <h3 className={styles.title}>{this.props.titleColumn}</h3>
+        <h3 className={styles.title}>{this.props.titleColumn}<span className={styles.icon}><Icon name={this.props.icon} /></span></h3>
 
         <div>
           {this.state.cards.map(({key, ...cardsProps}) => (

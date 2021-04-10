@@ -6,9 +6,11 @@ import PropTypes from 'prop-types';
 class Card extends React.Component {
 
   render() {
+    const {title} = this.props;
     return (
+
       <section className={styles.component}>
-        
+        {title}
       </section>
     )
   }

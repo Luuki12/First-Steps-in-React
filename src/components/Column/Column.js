@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Column.scss';
 import {settings} from '../../data/dataStore';
-import Card from '../Card/Card'
+import Card from '../Card/Card';
 import PropTypes from 'prop-types';
 import Creator from '../Creator/Creator';
 import Icon from '../Icon/Icon';
@@ -15,6 +15,8 @@ class Column extends React.Component {
   static propTypes = {
     cards: PropTypes.array,
     title: PropTypes.node.isRequired,
+    titleColumn: PropTypes.node,
+    icon: PropTypes.node,
   }
 
   addCard(title){
@@ -26,8 +28,8 @@ class Column extends React.Component {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
             icon: 'list-alt',
-          }
-        ]
+          },
+        ],
       }
     ));
   }
@@ -39,7 +41,7 @@ class Column extends React.Component {
 
         <div>
           {this.state.cards.map(({key, ...cardsProps}) => (
-          <Card key={key} {...cardsProps} />
+            <Card key={key} {...cardsProps} />
           ))}
         </div>
 
@@ -48,7 +50,7 @@ class Column extends React.Component {
         </div>
         
       </section>
-    )
+    );
   }
 }
 

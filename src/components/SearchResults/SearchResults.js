@@ -17,7 +17,7 @@ class SearchResults extends React.Component {
     return (
       <Container>
         <section className={styles.component}>
-          <h3 className={styles.title}>Search results<span className={styles.icon}><Icon name={"search"} /></span></h3>
+          <h3 className={styles.title}>Search results<span className={styles.icon}><Icon name={'search'} /></span></h3>
  
           <div>
             {cards.map(cardData => (

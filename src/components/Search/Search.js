@@ -18,7 +18,7 @@ class Search extends React.Component {
   }
 
   state = {
-    value: ''
+    value: '',
   }
 
   handleChange(event){
